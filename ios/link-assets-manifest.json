@@ -1,0 +1,21 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/druk-wide-bold.ttf",
+      "sha1": "32cf5241179426fae2d21bd976e48387e9217c4b"
+    },
+    {
+      "path": "assets/fonts/MontserratAlt1-ExtraLight.ttf",
+      "sha1": "20cd2b6ff22aa4f896e8db280a917a4335d45959"
+    },
+    {
+      "path": "assets/fonts/MontserratAlt1-Light.ttf",
+      "sha1": "cd0ff1b2b91518257e4b93e8152baecd756b6fd9"
+    },
+    {
+      "path": "assets/fonts/MontserratAlt1-Thin.ttf",
+      "sha1": "5286219df4cf478f4c7ff91ab29ccd9d2bb44aa6"
+    }
+  ]
+}
