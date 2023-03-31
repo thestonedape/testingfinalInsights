@@ -56,7 +56,6 @@ Whether it's a new education policy, healthcare scheme or housing benefit, we've
 Firstly, you will need to clone the repository that contains the React Native project onto your local machine. You can do this by running the following command in your terminal:
    </div>
   <br>
-  
   <div>
    Step 2: Install dependencies
 Once you have cloned the repository, navigate to the project directory and install the required dependencies by running the following command:
