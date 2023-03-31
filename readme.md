@@ -48,6 +48,9 @@ The app also provides a news section that keeps you updated, which allows indivi
 Whether it's a new education policy, healthcare scheme or housing benefit, we've got you covered!
   </div>
 <br>
+  
+  <div  align="center"> 
+   <img border="0" height='350' src="
 
 
 ### Steps to run it
