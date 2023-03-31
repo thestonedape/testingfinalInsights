@@ -89,4 +89,4 @@ To run the app on an emulator, open a new terminal window, navigate to the proje
  <br>
 ## Demo
 
-Click [HERE]() to check it out!
+Click [HERE](https://youtu.be/OQpG6NIUO8o) to check it out!
