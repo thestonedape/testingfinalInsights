@@ -62,7 +62,6 @@ Once you have cloned the repository, navigate to the project directory and insta
 
 ```
    npm install
-   
 ```
   </div>
   <br>
@@ -72,7 +71,6 @@ After the installation of dependencies is completed, you can start the project b
    
 ```
    npm start
-   
 ```
   </div>
   <br>
@@ -82,7 +80,6 @@ To run the app on an emulator, open a new terminal window, navigate to the proje
    
 ```
    npx react-native run-android
-   
 ```
   </div>
  <br>
