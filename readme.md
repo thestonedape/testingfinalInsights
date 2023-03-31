@@ -49,9 +49,8 @@ Whether it's a new education policy, healthcare scheme or housing benefit, we've
   </div>
 <br>
 
-<div>
-Steps to run it
-</div>
+
+### Steps to run it
 
 
 
