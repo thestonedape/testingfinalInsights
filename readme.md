@@ -15,7 +15,7 @@
 <br>
 
 # Context
-The app should provide detailed information about various government policies and schemes, including eligibility criteria, benefits, application process, and documents required.
+The app provide detailed information about various government policies and schemes, including eligibility criteria, benefits, application process, and documents required.
 <div align="center">
  <img border="0" src="https://github.com/thestonedape/testingfinalInsights/blob/master/assets/images/app.png" >
 </div>
