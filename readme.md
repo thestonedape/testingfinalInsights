@@ -60,21 +60,22 @@ Firstly, you will need to clone the repository that contains the React Native pr
    Step 2: Install dependencies
 Once you have cloned the repository, navigate to the project directory and install the required dependencies by running the following command:
 
-npm install
+```
+   npm install
   </div>
   <br>
   <div>
    Step 3: Run the project
 After the installation of dependencies is completed, you can start the project by running the following command:
-
-npm start
+```
+   npm start
   </div>
   <br>
   <div>
    Step 4: Run the app on an emulator or a physical device
 To run the app on an emulator, open a new terminal window, navigate to the project directory, and run the following command:
-   
-npx react-native run-android
+   ```
+   npx react-native run-android
   </div>
  <br>
 ## Demo
