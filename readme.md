@@ -20,7 +20,7 @@ The app should provide detailed information about various government policies an
  <img border="0" src="https://github.com/thestonedape/testingfinalInsights/blob/master/assets/images/app.png" >
 </div>
 <br>
-<b>INSIGHTS</b> is designed to help people who are unaware of government schemes including eligibility criteria, benefits, application process, and documents required.The app provides to save news and schemes which help to them to keep track. With filtered search, one can get to know all eligible schemes wwhich can benefit him\her.
+<b>INSIGHTS</b> is designed to help people who are unaware of government schemes including eligibility criteria, benefits, application process, and documents required. It provides a way for readers to save news and schemes, which helps to keep track of all eligible schemes which can benefit them. Schemes are also filtered so that users can get to know all eligible schemes which can benefit them. We have also used multiple sources like twitter, multiple media sources to ensure the accuracy of the data.
     <br>
 <br>
 <br>
