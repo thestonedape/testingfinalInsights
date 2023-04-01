@@ -56,7 +56,7 @@ Whether it's a new education policy, healthcare scheme or housing benefit, we've
   <img border="0" height='350' src="https://github.com/thestonedape/testingfinalInsights/blob/master/assets/images/3.png">
   <img border="0" height='350' src="https://github.com/thestonedape/testingfinalInsights/blob/master/assets/images/4.png">
   <img border="0" height='350' src="https://github.com/thestonedape/testingfinalInsights/blob/master/assets/images/5.png">
-  <img border="0" height='350' src="https://github.com/thestonedape/testingfinalInsights/blob/master/assets/images/6.png">
+  <img border="0" height='350' src="https://github.com/thestonedape/testingfinalInsights/blob/master/assets/images/2.png">
   <img border="0" height='350' src="https://github.com/thestonedape/testingfinalInsights/blob/master/assets/images/1.png">
        
   </div>
