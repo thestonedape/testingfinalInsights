@@ -106,7 +106,7 @@ const DrawerContent = () => {
       marginBottom: 20,
     },
     footerText: {
-      color: theme === 'Light' ? '#000' : '#fff',
+      color: theme === 'Light' ? '#000' : '#bbb'  ,
       fontSize: 12,
       marginBottom: 5,
     },
@@ -160,7 +160,21 @@ const DrawerContent = () => {
       <View style={styles.footer}>
         <Text style={styles.footerText}>Version {version}</Text>
         <Text style={styles.footerText}>Made with ❤️</Text>
-        <Text style={styles.footerText}>Backed by Inside Labs </Text>
+        <TouchableOpacity
+        style={{
+          padding: 10,
+          borderRadius: 5,
+          alignItems: 'center',
+          marginBottom: 0,
+        }}
+          onPress={() => Linking.openURL('https://insidelibrary.weebly.com')}
+        ><Text 
+        style={{
+          color: theme === 'Light' ? '#000' : '#fff',
+        }}
+
+        >Backed by Inside Labs </Text></TouchableOpacity>
+        
       </View>
     </View>
   );

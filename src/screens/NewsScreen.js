@@ -15,6 +15,14 @@ const options = {
   ignoreAndroidSystemSettings: false,
 };
 const NewsScreen = () => {
+  const [newsData, setNewsData] = useState([]);
+  const [refreshing, setRefreshing] = useState(false);
+  const dispatch = useDispatch();
+  const newsItems = useSelector((state) => state.newsItems);
+  const savedNewsItems = useSelector((state) => state.savedNews.savedNews);
+  
+  const theme = useSelector(state => state.theme) || 'Dark' ;
+  
   const styles = StyleSheet.create({
     container: {
       flex: 1,
@@ -97,14 +105,6 @@ const NewsScreen = () => {
       color: theme === 'Dark' ? '#fff' : '#000',
     },
   });
-  const [newsData, setNewsData] = useState([]);
-  const [refreshing, setRefreshing] = useState(false);
-  const dispatch = useDispatch();
-  const newsItems = useSelector((state) => state.newsItems);
-  const savedNewsItems = useSelector((state) => state.savedNews.savedNews);
-
-  const theme = useSelector(state => state.theme) || 'Dark' ;
-
   const loadData = async () => {
     setRefreshing(true);
     try{
@@ -173,6 +173,7 @@ const NewsScreen = () => {
     const savedItem = newsItems && newsItems.find((newsItem) => newsItem.url === item.url && newsItem.isSaved);
     console.log(item.title, savedItem);
     return (
+
       <View style={styles.container}>
         <TouchableOpacity
           style={styles.newsItem}

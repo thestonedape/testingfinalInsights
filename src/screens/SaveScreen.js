@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { View, Text, StyleSheet, FlatList, Image, TouchableOpacity, } from 'react-native';
+import { View, Text, StyleSheet, FlatList, Image, TouchableOpacity, Linking, } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import moment from 'moment';
 import { removeSavedNews, removeSavedSchemes, updateNewsItem, updateSchemesItem } from '../redux/action/action';
@@ -10,9 +10,11 @@ const options = {
   enableVibrateFallback: true,
   ignoreAndroidSystemSettings: false,
 };
+import { useNavigation } from '@react-navigation/native';
 
 const SaveScreen = () => {
   const theme = useSelector(state => state.theme) || 'Dark';
+
 
   const styles = StyleSheet.create({
     container: {
@@ -79,6 +81,7 @@ const SaveScreen = () => {
       fontSize: 14,
       marginTop: 5,
       color: theme === 'Dark' ? '#fff' : '#000',
+      maxHeight: 50,
     },
     newsSource: {
       fontSize: 12,
@@ -121,11 +124,14 @@ const SaveScreen = () => {
   };
 
 
+  const navigation = useNavigation();
 
   const renderSchemesItem = useCallback((scheme) => {
     console.log(scheme);
     return (
-      <View style={styles.newsItem}>
+      <TouchableOpacity style={styles.newsItem}
+      onPress={() => navigation.navigate('SchemeDetails', { scheme })}
+      >
         <Image style={styles.newsImage} source={{ uri: scheme.uri }} onError={() => console.log('Image load error')} />
         <View style={styles.newsInfo}>
           <Text style={styles.newsTitle}>{scheme.title}</Text>
@@ -136,7 +142,7 @@ const SaveScreen = () => {
               color={theme === 'Dark' ? '#fff' : '#000'} />
           </TouchableOpacity>
         </View>
-      </View>
+      </TouchableOpacity>
     );
   }, [handleRemoveSchemesPress, theme]);
   
@@ -145,7 +151,9 @@ const SaveScreen = () => {
 
   const renderNewsItem = useCallback(({ item }) => {
     return (
-      <View style={styles.newsItem}>
+      <TouchableOpacity 
+      onPress={() => Linking.openURL(item.url)}
+      style={styles.newsItem}>
         <Image style={styles.newsImage} source={{ uri: item.urlToImage }} />
         <View style={styles.newsInfo}>
           <Text style={styles.newsTitle}>{item.title}</Text>
@@ -159,7 +167,7 @@ const SaveScreen = () => {
               color={theme === 'Dark' ? '#fff' : '#000'} />
           </TouchableOpacity>
         </View>
-      </View>
+      </TouchableOpacity>
     );
   }, [handleRemovePress]);
 

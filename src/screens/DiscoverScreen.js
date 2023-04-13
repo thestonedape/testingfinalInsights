@@ -174,11 +174,14 @@ const DiscoverScreen = () => {
                 );
               case 'tweetsContainer':
                 return (
-                  <View style={styles.tweetsContainer}>
+                  <View style={styles.tweetsContainer}
+                  >
                     <Text style={styles.tweetsHeader}> Latest Tweets</Text>
                     <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} >
                       {tweets.map((domain) => (
-                        <View style={styles.cardContainer} key={domain.id}>
+                        <TouchableOpacity 
+                          onPress={() => navigation.navigate('TweetsDetails', { domain: domain.domain })}
+                        style={styles.cardContainer} key={domain.id}>
                           <View style={[styles.domainContainer, { width: 300 }]}>
                             <Text style={styles.domainHeader}>{domain.domain}</Text>
                             {domain.tweetdata.map((tweet) => (
@@ -186,12 +189,13 @@ const DiscoverScreen = () => {
                                 <View>
                                 <Text style={styles.tweetText}>{tweet.title}</Text>
                                 <Text style={styles.tweetUser}>@{tweet.author}</Text>
-                              </View>
+                                </View>
+                              
                               
                               </View>
                             ))}
                           </View>
-                        </View>
+                        </TouchableOpacity>
                       ))}
                     </ScrollView>
                   </View>

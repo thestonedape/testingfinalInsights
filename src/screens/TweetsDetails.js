@@ -5,7 +5,11 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { useSelector } from 'react-redux';
 
 
-const TweetsDetails = () => {
+const TweetsDetails = (route) => {
+
+    const { domain } = route.route.params;
+    const tweet = tweets.find((tweet) => tweet.domain === domain);
+
     const theme = useSelector(state => state.theme) || 'Dark';
     const styles = StyleSheet.create({
         tweetsContainer: {
@@ -46,24 +50,25 @@ const TweetsDetails = () => {
         },
     });
 
+
     return (
         <View style={styles.tweetsContainer}>
             <Text style={styles.header}>Latest Tweets</Text>
             <View style={styles.tweets}>
                 <FlatList
-                    data={tweets}
-                    keyExtractor={(item) => item.id.toString()}
-                    showsVerticalScrollIndicator={false}
+                    data={tweet.tweetdata}
                     renderItem={({ item }) => (
-                        <View key={item.id} style={styles.tweetContainer}>
+                        <View style={styles.tweetContainer}>
                             <View style={styles.tweetContent}>
                                 <Text style={styles.tweetText}>{item.title}</Text>
                                 <Text style={styles.tweetUser}>@{item.author}</Text>
                             </View>
-                            <Icon name="twitter" color="#1DA1F2" size={24} />
+                            <Icon name="twitter" size={26} color="#1DA1F2" />
                         </View>
                     )}
+                    keyExtractor={(item) => item.id}
                 />
+
             </View>
         </View>
     )

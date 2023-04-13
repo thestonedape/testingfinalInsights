@@ -130,14 +130,14 @@ const HomeScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-      <TouchableOpacity onPress={handleMenuIconPress}>
-        <Icon name="menu" style={styles.menuIcon} />
-      </TouchableOpacity>
+        <TouchableOpacity onPress={handleMenuIconPress}>
+          <Icon name="menu" style={styles.menuIcon} />
+        </TouchableOpacity>
         <Text style={styles.appBarTitle}>Insights</Text>
       </View>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ paddingTop: 20,paddingBottom: 20 }}
+        contentContainerStyle={{ paddingTop: 20, paddingBottom: 20 }}
       >
         <View style={styles.Toptext}>
           <Text style={{
@@ -227,7 +227,7 @@ const HomeScreen = () => {
                 }}>{scheme.domain}</Text>
               </View>
               <View style={styles.schemesContainer}>
-                {scheme.schemes.map((scheme) => (
+                {scheme.schemes.slice(0, 6).map((scheme) => (
                   <TouchableOpacity
                     onPress={() => navigation.navigate('SchemeDetails', { scheme: scheme })}
                     key={scheme.id}
@@ -251,6 +251,7 @@ const HomeScreen = () => {
     </SafeAreaView>
   );
 };
+
 
 export default HomeScreen;
 
