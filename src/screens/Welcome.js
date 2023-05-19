@@ -41,7 +41,7 @@ const Welcome = ({ navigation }) => {
     setPressed(true);
     Animated.timing(translateY, {
       toValue: -5,
-      duration: 100,
+      duration: 80,
       useNativeDriver: true,
     }).start();
   };
@@ -115,7 +115,7 @@ const Welcome = ({ navigation }) => {
       alignItems: 'center',
       marginBottom: 50,
       elevation: 20,
-      shadowColor: theme === 'Dark' ? '#FFC6D4' : '#000',
+      shadowColor: theme === 'Dark' ? '#585858' : '#000',
       shadowOffset: { width: 0, height: 0 },
       shadowOpacity: 0.5,
       shadowRadius: 10,
